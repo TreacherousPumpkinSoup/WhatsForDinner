@@ -247,127 +247,219 @@ function pickRandom(list) {
 // ---------- DATA ----------
 const proteins = [
 //Component Protiens
-  { name: "Grilled Chicken", complete: false },
-  { name: "Greek Chicken", complete: false },
-  { name: "Roasted Chicken Thighs", complete: false },
-  { name: "Baked Salmon", complete: false },
-  { name: "Lemon Herb Chicken", complete: false },
-  { name: "Grilled Fish", complete: false },
-  { name: "Baked Fish", complete: false },
-  { name: "Nando's Style Chicken", complete: false },
-  { name: "Dukkah Crusted Chicken", complete: false },
-  { name: "Marinara", complete: false },
-  { name: "Lamb Chops", complete: false },
-  { name: "Seared Scallops", complete: false },
-  { name: "Steamed Mussels", complete: false },
-  { name: "Chicken Rissoles", complete: false },
-  { name: "Beef Rissoles", complete: false },
-  { name: "Hot Honey Salmon", complete: false },
-  { name: "Lamb Rissoles", complete: false },
-  { name: "Pork Sausages", complete: false },
-  { name: "Lamb Sausages", complete: false },
-  { name: "Beef Sausages", complete: false },
-  { name: "Omelette", complete: false },
-  { name: "Halloumi", complete: false },
-  { name: "Chickpeas", complete: false },
-  { name: "Lentils", complete: false },
-  { name: "Falafel", complete: false },
-  { name: "Steak", complete: false },
-  { name: "Tandoori Chicken", complete: false },
-  { name: "Miso Salmon", complete: false },
-  { name: "Pork Belly", complete: false },
-  { name: "Prawns", complete: false },
-  { name: "Confit Duck", complete: false },
-  { name: "Crispy Tofu", complete: false },
-  { name: "Pomegranate Chicken", complete: false },
-  { name: "Glazed Ham", complete: false },
-  { name: "Jerked Chicken", complete: false },
-  { name: "Camembert Stuffed Chicken", complete: false },
-  { name: "Prosciutto", complete: false },
-  { name: "Roasted Pork", complete: false },
-  { name: "Roasted Lamb", complete: false },
-  { name: "Buffalo Wings", complete: false },
-  { name: "Lamb Shanks", complete: false },
+{ name: "Grilled Chicken", complete: false },
+{ name: "Greek Chicken", complete: false },
+{ name: "Roasted Chicken Thighs", complete: false },
+{ name: "Lemon Herb Chicken", complete: false },
+{ name: "Nando's Style Chicken", complete: false },
+{ name: "Dukkah Crusted Chicken", complete: false },
+{ name: "Tandoori Chicken", complete: false },
+{ name: "Jerked Chicken", complete: false },
+{ name: "Pomegranate Chicken", complete: false },
+{ name: "Camembert Stuffed Chicken", complete: false },
+{ name: "Chicken Rissoles", complete: false },
+{ name: "Buffalo Wings", complete: false },
+
+{ name: "Baked Salmon", complete: false },
+{ name: "Hot Honey Salmon", complete: false },
+{ name: "Miso Salmon", complete: false },
+{ name: "Grilled Fish", complete: false },
+{ name: "Baked Fish", complete: false },
+{ name: "Seared Scallops", complete: false },
+{ name: "Steamed Mussels", complete: false },
+{ name: "Prawns", complete: false },
+{ name: "Marinara", complete: false },
+
+{ name: "Steak", complete: false },
+{ name: "Lamb Chops", complete: false },
+{ name: "Roasted Lamb", complete: false },
+{ name: "Lamb Shanks", complete: false },
+{ name: "Lamb Rissoles", complete: false },
+{ name: "Beef Rissoles", complete: false },
+{ name: "Beef Sausages", complete: false },
+{ name: "Lamb Sausages", complete: false },
+{ name: "Pork Sausages", complete: false },
+{ name: "Pork Belly", complete: false },
+{ name: "Roasted Pork", complete: false },
+{ name: "Glazed Ham", complete: false },
+{ name: "Prosciutto", complete: false },
+{ name: "Confit Duck", complete: false },
+
+{ name: "Omelette", complete: false },
+{ name: "Halloumi", complete: false },
+
+/* Vegetarian / Plant-Based Proteins */
+{ name: "Crispy Tofu", complete: false },
+{ name: "Miso Glazed Tofu", complete: false },
+{ name: "Grilled Tofu Steaks", complete: false },
+
+{ name: "Chickpeas", complete: false },
+{ name: "Spiced Chickpeas", complete: false },
+{ name: "Roasted Chickpeas", complete: false },
+
+{ name: "Lentils", complete: false },
+{ name: "Braised Lentils", complete: false },
+{ name: "Lentil Patties", complete: false },
+
+{ name: "Falafel", complete: false },
+
+{ name: "Tempeh", complete: false },
+{ name: "Grilled Tempeh", complete: false },
+
+{ name: "Paneer", complete: false },
+{ name: "Grilled Paneer", complete: false },
+
+{ name: "Black Bean Patties", complete: false },
+{ name: "Vegetable Rissoles", complete: false },
 
 
 //Complete Meals
-  { name: "Bahn Mi", complete: true },
-  { name: "Pork Belly Salad", complete: true },
-  { name: "Mango Chicken", complete: true },
-  { name: "Stir Fry Noodles", complete: true },
-  { name: "Peanut Satay Noodles", complete: true },
-  { name: "Fish Stew", complete: true },
-  { name: "Mauritian Fried Noodles", complete: true },
-  { name: "Ratatouille", complete: true },
-  { name: "Beef Ragu", complete: true },
-  { name: "Slow Cooked Lamb Shoulder", complete: true },
-  { name: "Paella", complete: true },
-  { name: "Seafood Pasta", complete: true },
-  { name: "Beef Noodles", complete: true },
-  { name: "Shakshuka", complete: true },
-  { name: "Seafood Curry", complete: true },
-  { name: "Wonton Noodle Soup", complete: true },
-  { name: "Chicken Tagine", complete: true },
-  { name: "Noodle Soup", complete: true },
-  { name: "Lasagna", complete: true },
-  { name: "Pho", complete: true },
-  { name: "Katsu Curry", complete: true },
-  { name: "Butter Chicken", complete: true },
-  { name: "Chicken Korma", complete: true },
-  { name: "Rogan Josh", complete: true },
-  { name: "Chicken Biryani", complete: true },
-  { name: "Honey Mustard Chicken", complete: true },
-  { name: "Mauritian Curry", complete: true },
-  { name: "Thai Green Curry", complete: true },
-  { name: "Chicken & Sun-Dried Tomato Pasta", complete: true },
-  { name: "Thai Red Curry", complete: true },
-  { name: "Singapore Noodles", complete: true },
-  { name: "Thai Beef Salad", complete: true },
-  { name: "Tuna Sushi Bowl", complete: true },
-  { name: "Seafood Curry", complete: true },
-  { name: "Tandoori Chicken Wraps", complete: true },
-  { name: "Mahmoos gutaifi", complete: true },
-  { name: "Pilau", complete: true },
-  { name: "Fish Vindaye", complete: true },
-  { name: "Beef Bourguino w Mash", complete: true },
-  { name: "Ceviche", complete: true },
-  { name: "Jacket Potatoes w/ Beef", complete: true },
-  { name: "Shepards Pie", complete: true },
-  { name: "Laksa", complete: true },
-  { name: "Stir-Fried Noodles", complete: true }
+{ name: "Bahn Mi", complete: true },
+{ name: "Pork Belly Salad", complete: true },
+{ name: "Mango Chicken", complete: true },
+
+{ name: "Stir Fry Noodles", complete: true },
+{ name: "Peanut Satay Noodles", complete: true },
+{ name: "Singapore Noodles", complete: true },
+{ name: "Mauritian Fried Noodles", complete: true },
+{ name: "Beef Noodles", complete: true },
+{ name: "Wonton Noodle Soup", complete: true },
+{ name: "Noodle Soup", complete: true },
+{ name: "Pho", complete: true },
+{ name: "Laksa", complete: true },
+
+{ name: "Fish Stew", complete: true },
+{ name: "Seafood Curry", complete: true },
+{ name: "Seafood Pasta", complete: true },
+{ name: "Ceviche", complete: true },
+
+{ name: "Ratatouille", complete: true },
+{ name: "Shakshuka", complete: true },
+
+{ name: "Beef Ragu", complete: true },
+{ name: "Lasagna", complete: true },
+{ name: "Beef Bourguignon w Mash", complete: true },
+
+{ name: "Slow Cooked Lamb Shoulder", complete: true },
+{ name: "Chicken Tagine", complete: true },
+{ name: "Shepherds Pie", complete: true },
+
+{ name: "Paella", complete: true },
+{ name: "Pilau", complete: true },
+
+{ name: "Butter Chicken", complete: true },
+{ name: "Chicken Korma", complete: true },
+{ name: "Rogan Josh", complete: true },
+{ name: "Chicken Biryani", complete: true },
+{ name: "Mauritian Curry", complete: true },
+{ name: "Thai Green Curry", complete: true },
+{ name: "Thai Red Curry", complete: true },
+{ name: "Fish Vindaye", complete: true },
+
+{ name: "Katsu Curry", complete: true },
+{ name: "Honey Mustard Chicken", complete: true },
+{ name: "Tandoori Chicken Wraps", complete: true },
+
+{ name: "Chicken & Sun-Dried Tomato Pasta", complete: true },
+{ name: "Seafood Pasta", complete: true },
+
+{ name: "Thai Beef Salad", complete: true },
+{ name: "Tuna Sushi Bowl", complete: true },
+
+{ name: "Jacket Potatoes w/ Beef", complete: true },
+
+{ name: "Mahmoos Gutaifi", complete: true },
+
+/* Vegetarian / Veg-Friendly Complete Meals */
+{ name: "Vegetable Curry", complete: true },
+{ name: "Chickpea & Spinach Curry", complete: true },
+{ name: "Lentil Dahl", complete: true },
+{ name: "Vegetable Biryani", complete: true },
+{ name: "Paneer Butter Masala", complete: true },
+{ name: "Tofu Stir Fry", complete: true },
+{ name: "Vegetable Fried Rice", complete: true },
+{ name: "Mushroom Risotto", complete: true },
+{ name: "Eggplant Parmigiana", complete: true },
+{ name: "Stuffed Capsicum Bake", complete: true },
+{ name: "Falafel Bowl", complete: true },
+{ name: "Halloumi & Roasted Vegetable Bowl", complete: true }
 ];
 
 const carbs = [
-  "Brown Rice",
-  "Wild Rice Salad",
-  "Vermicelli Noodles",
-  "White Rice",
-  "Garlic Rice",
-  "Saffron Rice",
-  "Potato Salad",
-  "Lemon Rice",
-  "Sushi Rice",
-  "Biryani",
-  "Mac & Cheese",
-  "Orzo",
-  "Couscous",
-  "Pearl Couscous",
-  "Farro",
-  "Barley",
-  "Quinoa",
-  "Roasted Potatoes",
-  "Sweet Potatoes",
-  "Sweet Potato Mash",
-  "Mashed Potatoes",
-  "Polenta",
-  "Whole Wheat Pasta",
-  "Pita Bread",
-  "Sourdough Bread",
-  "Gnocchi",
-  "Okinomiyaki",
-  "Latkas",
-  "Flatbread",
-  "Focaccia"
+"Brown Rice",
+"White Rice",
+"Garlic Rice",
+"Lemon Rice",
+"Saffron Rice",
+"Sushi Rice",
+"Coconut Rice",
+"Fried Rice",
+
+"Wild Rice Salad",
+"Quinoa Salad",
+"Barley Salad",
+"Farro Salad",
+
+"Vermicelli Noodles",
+"Rice Noodles",
+"Udon Noodles",
+"Soba Noodles",
+
+"Biryani",
+
+"Mac & Cheese",
+
+"Orzo",
+"Orzo Salad",
+
+"Couscous",
+"Pearl Couscous",
+
+"Farro",
+"Barley",
+"Quinoa",
+
+"Roasted Potatoes",
+"Mashed Potatoes",
+"Potato Salad",
+"Boiled Potatoes with Herbs",
+"Crispy Potatoes",
+
+"Sweet Potatoes",
+"Sweet Potato Mash",
+"Roasted Sweet Potatoes",
+"Sweet Potato Wedges",
+
+"Polenta",
+"Creamy Polenta",
+"Grilled Polenta",
+
+"Whole Wheat Pasta",
+"Penne Pasta",
+"Spaghetti Pasta",
+
+"Gnocchi",
+
+"Pita Bread",
+"Flatbread",
+"Focaccia",
+"Sourdough Bread",
+"Garlic Bread",
+
+"Okinomiyaki",
+"Latkas",
+
+"Steamed Buns",
+"Vegetable Dumplings",
+
+"Risotto",
+"Mushroom Risotto",
+
+"Cornbread",
+"Mashed Corn",
+
+"Millet",
+"Bulgur Wheat"
 ];
 
 const vegetables = [
@@ -478,7 +570,6 @@ const vegetables = [
 "Miso Soup",
 "Pomegranate"
 ];
-
 //Roll function
 let currentProtein = null;
 let currentCarb = null;
@@ -689,5 +780,6 @@ setRandomBackground();
 
 </body>
 </html>
+
 
 
